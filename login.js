@@ -125,7 +125,7 @@ function submit() {
                 console.log(res.data)
                 localStorage.setItem("token", res.data.token)
                 localStorage.setItem("user", JSON.stringify(res.data.user))
-                window.location.href = 'http://127.0.0.1:5500/index.html'
+                window.location.href = './index.html'
             }).catch(err => {
                 if (err.response.data.errors.username) {
                     registerUsername.classList.add("is-invalid")
@@ -153,7 +153,7 @@ function submit() {
         axios.post("https://tarmeezacademy.com/api/v1/login", params).then(res => {
             localStorage.setItem("token", res.data.token)
             localStorage.setItem("user", JSON.stringify(res.data.user))
-            window.location.href = 'http://127.0.0.1:5500/index.html'
+            window.location.href = './index.html'
         }).catch(err => {
             let toastDiv = document.getElementById("toast-post")
             toastDiv.innerHTML =
