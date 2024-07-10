@@ -223,10 +223,10 @@ function pagination() {
 }
 
 function establish() {
-    setProfileDatasetId()
     if (localStorage.getItem("token") == null || localStorage.getItem("user") == null) {
         window.location.href = "./login.html"
     }
+    setProfileDatasetId()
     imgUser = JSON.parse(localStorage.getItem("user")).profile_image;
     if (imgUser == "[object Object]") imgUser = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     document.getElementById("home-img-user").src = imgUser
@@ -337,10 +337,10 @@ function profileEvents() {
         })
     }
 }
+establish();
 profileEvents()
 loadingPage()
 logout();
-establish();
 toolTipBootstrap();
 uploadImage();
 textareaAutoHeight();
