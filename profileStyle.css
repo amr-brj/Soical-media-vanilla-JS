@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profile-user-cover {
+    height: 35vh;
+    width: 100%;
+    background-color: #2F3367;
+    position: relative;
+    box-shadow: 5px 0 20px 1px;
+}
+
+.profile-user-cover .profile-user-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #2F3367;
+    text-align: center;
+}
+
+.profile-user-cover .profile-user-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.loading-div1 {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.loading-div1 div {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    color: #2F3367 !important;
+}
